@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Remix: Fathima AI Assistant",
+  "description": "A real-time voice-to-voice AI assistant with a mix of anime and intelligent girl persona, providing warm and empathetic companionship.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "real-time voice conversation"
+  ]
+}

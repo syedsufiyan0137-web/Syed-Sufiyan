@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-purple: #b026ff;
+  --color-neon-pink: #ff26b0;
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased overflow-hidden;
+    background: radial-gradient(circle at 50% 50%, #1a0b2e 0%, #000000 100%);
+  }
+}
+
+@layer utilities {
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.5), 0 0 40px rgba(176, 38, 255, 0.2);
+  }
+  .glow-pink {
+    box-shadow: 0 0 20px rgba(255, 38, 176, 0.5), 0 0 40px rgba(255, 38, 176, 0.2);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(176, 38, 255, 0.8);
+  }
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl;
+  }
+}
+
+.particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+}
+
